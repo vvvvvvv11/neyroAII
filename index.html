@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroAI - Профессиональная нейросеть на OpenRouter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Навигация -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <div class="logo">
+                        <i class="fas fa-brain"></i>
+                        <span>NeuroAI</span>
+                    </div>
+                    <span class="logo-badge">OpenRouter</span>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#hero">Главная</a></li>
+                        <li><a href="#features">Возможности</a></li>
+                        <li><a href="#chat">Чат</a></li>
+                        <li><a href="#models">Модели</a></li>
+                        <li><a href="#about">О нас</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <button class="btn btn-secondary" onclick="showSettings()">
+                        <i class="fas fa-cog"></i> Настройки
+                    </button>
+                    <button class="btn btn-primary" onclick="scrollToChat()">
+                        <i class="fas fa-rocket"></i> Начать
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Герой секция -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-sparkles"></i> Новая версия 2.0
+                </div>
+                <h1>Профессиональная нейросеть<br>на базе <span class="highlight">OpenRouter</span></h1>
+                <p>Мощный AI-ассистент для генерации текста, анализа данных и творческих задач. Работает с лучшими моделями: GPT-4, Claude, Llama и другими.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="scrollToChat()">
+                        <i class="fas fa-comments"></i> Открыть чат
+                    </button>
+                    <button class="btn btn-secondary btn-large" onclick="scrollToFeatures()">
+                        <i class="fas fa-info-circle"></i> Узнать больше
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Моделей</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Токенов</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Доступ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Возможности -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Возможности нейросети</h2>
+                <p>Мощные инструменты для профессиональной работы</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Генерация текста</h3>
+                    <p>Создавайте статьи, посты, рекламные тексты и документацию за секунды. Поддержка русского языка и профессиональной терминологии.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Интерактивный чат</h3>
+                    <p>Ведите диалог с нейросетью с сохранением истории. Задавайте сложные вопросы и получайте развернутые ответы.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Программирование</h3>
+                    <p>Генерация кода, отладка, объяснение алгоритмов. Работа с Python, JavaScript, Java и другими языками.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Анализ данных</h3>
+                    <p>Обработка и анализ информации, выявление паттернов, создание отчетов и визуализация результатов.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Творчество</h3>
+                    <p>Написание стихов, сценариев, идей для бизнеса. Вдохновение для креативных задач любой сложности.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Производительность</h3>
+                    <p>Быстрая работа, низкая задержка, надежность. Интеграция с лучшими моделями через OpenRouter API.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Чат -->
+    <section id="chat" class="chat-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Интерактивный чат</h2>
+                <p>Общайтесь с нейросетью в реальном времени</p>
+            </div>
+            
+            <div class="chat-container">
+                <!-- Настройки чата -->
+                <div class="chat-settings">
+                    <div class="settings-group">
+                        <label for="model-select"><i class="fas fa-microchip"></i> Модель:</label>
+                        <select id="model-select" class="settings-select">
+                            <option value="mistralai/mistral-small-creative">Mistral Small Creative (бесплатная)</option>
+                            <option value="openai/gpt-4o-mini">GPT-4o Mini (быстрая)</option>
+                            <option value="openai/gpt-4o">GPT-4o (умная)</option>
+                            <option value="anthropic/claude-3.5-sonnet">Claude 3.5 Sonnet</option>
+                            <option value="meta-llama/llama-3.1-70b-instruct">Llama 3.1 70B</option>
+                            <option value="mistralai/mistral-nemo">Mistral Nemo</option>
+                        </select>
+                    </div>
+                    <div class="settings-group">
+                        <label for="temperature"><i class="fas fa-thermometer-half"></i> Креативность: <span id="temp-value">0.7</span></label>
+                        <input type="range" id="temperature" min="0" max="2" step="0.1" value="0.7" class="settings-range">
+                    </div>
+                    <div class="settings-group">
+                        <label for="max-tokens"><i class="fas fa-text-height"></i> Макс. токенов: <span id="tokens-value">500</span></label>
+                        <input type="range" id="max-tokens" min="100" max="2000" step="100" value="500" class="settings-range">
+                    </div>
+                </div>
+
+                <!-- История чата -->
+                <div class="chat-history" id="chat-history">
+                    <div class="chat-message ai-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <div class="message-header">
+                                <span class="message-author">NeuroAI</span>
+                                <span class="message-time">Только что</span>
+                            </div>
+                            <div class="message-text">
+                                Привет! Я NeuroAI, ваша профессиональная нейросеть на базе OpenRouter. Чем я могу помочь вам сегодня?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ввод сообщения -->
+                <div class="chat-input-container">
+                    <div class="chat-input-wrapper">
+                        <textarea 
+                            id="chat-input" 
+                            placeholder="Введите ваше сообщение..." 
+                            rows="3"
+                            onkeydown="handleKeyDown(event)"
+                        ></textarea>
+                        <div class="chat-actions">
+                            <button class="btn btn-secondary" onclick="clearChat()" title="Очистить чат">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="btn btn-secondary" onclick="toggleImageMode()" id="image-mode-btn" title="Режим генерации изображений">
+                                <i class="fas fa-image"></i>
+                            </button>
+                            <button class="btn btn-primary" onclick="sendMessage()" id="send-btn">
+                                <i class="fas fa-paper-plane"></i> Отправить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Состояния -->
+                <div class="chat-status" id="chat-status" style="display: none;">
+                    <div class="spinner"></div>
+                    <span id="status-text">Нейросеть думает...</span>
+                </div>
+                <div class="chat-error" id="chat-error" style="display: none;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span id="error-text">Произошла ошибка</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модели -->
+    <section id="models" class="models-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Доступные модели</h2>
+                <p>Выберите подходящую модель для вашей задачи</p>
+            </div>
+            <div class="models-grid" id="models-grid">
+                <!-- Модели будут загружены динамически -->
+                <div class="model-card loading">
+                    <div class="model-icon">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </div>
+                    <h3>Загрузка...</h3>
+                    <p>Получение списка моделей с OpenRouter</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>О NeuroAI</h2>
+                    <p>NeuroAI — это профессиональная платформа для работы с нейросетями, интегрированная с OpenRouter API. Мы предоставляем доступ к лучшим AI-моделям в мире в одном удобном интерфейсе.</p>
+                    <p>Наша цель — сделать искусственный интеллект доступным для каждого, от студентов до профессионалов. Мы используем только проверенные и надежные API, гарантируя стабильность и безопасность ваших данных.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="tech-tag"><i class="fab fa-react"></i> Vanilla JS</span>
+                        <span class="tech-tag"><i class="fas fa-database"></i> OpenRouter</span>
+                        <span class="tech-tag"><i class="fas fa-shield-alt"></i> Secure</span>
+                    </div>
+                </div>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Поддержка русского языка</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Быстрая генерация ответов</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>История диалогов</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Настройка параметров</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Профессиональные модели</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>24/7 поддержка</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-brain"></i>
+                        <span>NeuroAI</span>
+                    </div>
+                    <p>Профессиональная нейросеть на базе OpenRouter</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Продукт</h4>
+                        <a href="#features">Возможности</a>
+                        <a href="#models">Модели</a>
+                        <a href="#chat">Чат</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Ресурсы</h4>
+                        <a href="#" onclick="showSettings()">Настройки</a>
+                        <a href="https://openrouter.ai" target="_blank">OpenRouter</a>
+                        <a href="#" onclick="showAbout()">О нас</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Контакты</h4>
+                        <a href="mailto:support@neuroai.example">support@neuroai.example</a>
+                        <a href="https://github.com" target="_blank">GitHub</a>
+                        <a href="https://t.me" target="_blank">Telegram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NeuroAI. Все права защищены.</p>
+                <div class="footer-legal">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно настроек -->
+    <div class="modal" id="settings-modal">
+        <div class="modal-overlay" onclick="closeSettings()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-cog"></i> Настройки</h3>
+                <button class="modal-close" onclick="closeSettings()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-section">
+                    <h4><i class="fas fa-key"></i> API ключ</h4>
+                    <p class="settings-description">Ваш API ключ OpenRouter хранится на сервере и не передается в браузер.</p>
+                    <div class="settings-status">
+                        <span class="status-badge" id="api-status">
+                            <i class="fas fa-check-circle"></i> API настроен
+                        </span>
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h4><i class="fas fa-info-circle"></i> Информация</h4>
+                    <ul class="settings-info">
+                        <li><i class="fas fa-server"></i> Сервер: <span id="server-url">http://localhost:3000</span></li>
+                        <li><i class="fas fa-clock"></i> Время: <span id="current-time">--:--:--</span></li>
+                        <li><i class="fas fa-microchip"></i> Статус: <span id="server-status">Проверка...</span></li>
+                    </ul>
+                </div>
+                <div class="settings-section">
+                    <h4><i class="fas fa-database"></i> Статистика</h4>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value" id="stat-messages">0</div>
+                            <div class="stat-label">Сообщений</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="stat-tokens">0</div>
+                            <div class="stat-label">Токенов</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="stat-requests">0</div>
+                            <div class="stat-label">Запросов</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeSettings()">Закрыть</button>
+                <button class="btn btn-primary" onclick="checkServerStatus()">
+                    <i class="fas fa-sync"></i> Проверить статус
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Скрипты -->
+    <script src="script.js"></script>
+</body>
+</html>
