@@ -1,6 +1,7 @@
 // server.js - Бэкенд для нейросети с OpenRouter API
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const fetch = global.fetch || require('node-fetch');
 const dotenv = require('dotenv');
 
@@ -23,6 +24,9 @@ if (!OPENROUTER_API_KEY) {
 // Middleware
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
+
+// Serve static files
+app.use(express.static(path.join(__dirname)));
 
 // Логирование запросов
 app.use((req, res, next) => {
@@ -272,6 +276,11 @@ app.get('/health', (req, res) => {
         timestamp: new Date().toISOString(),
         apiConfigured: !!OPENROUTER_API_KEY
     });
+});
+
+// Serve index.html for root path
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Обработка 404
